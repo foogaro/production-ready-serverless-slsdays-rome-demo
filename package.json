@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sls": "serverless",
-    "test": "TEST_MODE=handler mocha tests/test_cases --reporter spec --timeout 5000",
-    "acceptance": "TEST_MODE=http mocha tests/test_cases --reporter spec --timeout 5000"
+    "test": "cross-env TEST_MODE=handler mocha tests/test_cases --reporter spec --timeout 5000",
+    "acceptance": "cross-env TEST_MODE=http mocha tests/test_cases --reporter spec --timeout 5000"
   },
   "author": "Yan Cui (theburningmonk@gmail.com)",
   "license": "MIT",
@@ -14,6 +14,7 @@
     "aws-sdk": "^2.622.0",
     "chai": "^4.1.2",
     "cheerio": "^1.0.0-rc.2",
+    "cross-env": "^7.0.0",
     "lodash": "^4.17.10",
     "mocha": "^5.2.0",
     "mock-aws": "^1.2.3",
